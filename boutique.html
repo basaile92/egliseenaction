@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique – Église en Action</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .product-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+    }
+    .product-img {
+      height: 200px;
+      background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h3 {
+      font-family: var(--font-logo);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .product-info p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+    .product-price {
+      color: var(--color-primary);
+      font-family: var(--font-logo);
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 768px) {
+      .products-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" alt="Église en Action">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+          <li><a href="nos-departements.html">Nos Départements</a></li>
+          <li><a href="je-suis-nouveau.html">Je suis nouveau</a></li>
+          <li><a href="devenir-membre.html">Devenir membre</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="contact.html" class="btn-nav">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Boutique</h1>
+      <p>Découvrez nos ressources et articles pour nourrir votre foi au quotidien.</p>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img">&#128214;</div>
+          <div class="product-info">
+            <h3>Livre de louange EEA</h3>
+            <p>Recueil des chants et cantiques de notre communauté.</p>
+            <div class="product-price">15,00 €</div>
+            <a href="contact.html" class="btn btn-primary" style="display:block;text-align:center;">Commander</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">&#127925;</div>
+          <div class="product-info">
+            <h3>CD Worship EEA</h3>
+            <p>Album de louange enregistré lors de nos cultes.</p>
+            <div class="product-price">10,00 €</div>
+            <a href="contact.html" class="btn btn-primary" style="display:block;text-align:center;">Commander</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">&#128237;</div>
+          <div class="product-info">
+            <h3>Guide du Nouveau Croyant</h3>
+            <p>Un parcours pour les personnes qui viennent de donner leur vie à Christ.</p>
+            <div class="product-price">8,00 €</div>
+            <a href="contact.html" class="btn btn-primary" style="display:block;text-align:center;">Commander</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">&#128248;</div>
+          <div class="product-info">
+            <h3>T-shirt EEA</h3>
+            <p>T-shirt officiel avec le logo de l'Église en Action.</p>
+            <div class="product-price">20,00 €</div>
+            <a href="contact.html" class="btn btn-primary" style="display:block;text-align:center;">Commander</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">&#128203;</div>
+          <div class="product-info">
+            <h3>Agenda de prière</h3>
+            <p>Carnet de prière et de méditation pour 365 jours.</p>
+            <div class="product-price">12,00 €</div>
+            <a href="contact.html" class="btn btn-primary" style="display:block;text-align:center;">Commander</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">&#129354;</div>
+          <div class="product-info">
+            <h3>Mug EEA</h3>
+            <p>Mug avec la citation de l'église pour commencer votre journée avec foi.</p>
+            <div class="product-price">9,00 €</div>
+            <a href="contact.html" class="btn btn-primary" style="display:block;text-align:center;">Commander</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <img src="logo.svg" alt="Église en Action">
+          <p style="margin-top:1rem;">Un lieu d'accueil chaleureux et de foi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+            <li><a href="nos-departements.html">Nos Départements</a></li>
+            <li><a href="je-suis-nouveau.html">Je suis nouveau</a></li>
+            <li><a href="devenir-membre.html">Devenir membre</a></li>
+            <li><a href="don-en-ligne.html">Don en ligne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Restons en contact</h4>
+          <p>N'hésitez pas à nous contacter pour toute question.</p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;display:inline-block;">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Église en Action – Tous droits réservés | <a href="mentions-legales.html">Mentions légales</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
