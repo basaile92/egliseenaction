@@ -185,10 +185,11 @@ h2 {
   font-weight: 800;
 }
 .btn-white:hover {
-  background: transparent;
-  color: white;
-  border-color: rgba(255,255,255,0.6);
+  background: white;
+  color: var(--ink);
+  border-color: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(255,255,255,0.2);
 }
 
 /* ================================================
@@ -675,13 +676,14 @@ h2 {
   background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(255,255,255,0.06), transparent 60%);
 }
 
+.section-cta .container { position: relative; z-index: 1; }
+
 .section-cta h2 {
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 2rem;
-  position: relative;
   color: white;
 }
 
@@ -1443,8 +1445,9 @@ h2 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 48px;
+  align-items: stretch;
 }
 
 .footer-col h4 {
@@ -1456,14 +1459,39 @@ h2 {
   color: rgba(236,240,255,0.3);
   margin-bottom: 20px;
 }
-.footer-col p { color: rgba(236,240,255,0.4); font-size: 0.88rem; line-height: 1.85; }
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col ul li a {
-  color: rgba(236,240,255,0.42);
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-contact-list li {
+  display: flex;
+  color: white;
   font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.footer-contact-list a,
+.footer-contact-list a:visited {
+  color: white;
   transition: color 0.2s;
 }
-.footer-col ul li a:hover { color: var(--teal); }
+.footer-contact-list a:hover { color: var(--teal); }
+.footer-label {
+  color: rgba(236,240,255,0.4);
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: 0.4em;
+}
+
+.footer-col .footer-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 0;
+  filter: grayscale(0.3) brightness(0.85);
+}
 
 .footer-bottom {
   padding: 20px 0;
@@ -1481,7 +1509,9 @@ h2 {
 @media (max-width: 1024px) {
   .values-grid  { grid-template-columns: repeat(4, 1fr); }
   .pastors-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid  { grid-template-columns: 1fr 1fr; }
+  .footer-grid  { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .footer-col .footer-map { aspect-ratio: 16 / 9; }
+  .footer-col:last-child { grid-column: 1 / -1; }
   .stats-grid   { grid-template-columns: repeat(2, 1fr); }
   .stat-item    { border-bottom: 1px solid var(--border); }
   .stat-item:nth-child(even) { border-right: none; }
