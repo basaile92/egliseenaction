@@ -8,7 +8,7 @@ function renderHeader() {
   <header id="site-header" class="site-header">
     <div class="header-inner">
       <div class="logo">
-        <a href="index.html"><img src="logo.svg" alt="Église en Action"></a>
+        <a href="index.html"><img src="logo.webp" alt="Église en Action"></a>
       </div>
       <nav class="main-nav">
         <button class="nav-toggle" aria-label="Menu">&#9776;</button>
@@ -34,7 +34,7 @@ function renderFooter() {
     <div class="footer-top">
       <div class="container footer-grid">
         <div class="footer-col">
-          <img src="logo.svg" alt="Église en Action">
+          <img src="logo.webp" alt="Église en Action">
           <p style="margin-top:1rem;">29 Bd Karl Marx<br>95100 Argenteuil<br>01 39 47 86 57</p>
         </div>
         <div class="footer-col">
